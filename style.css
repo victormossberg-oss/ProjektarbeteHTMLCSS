@@ -1,67 +1,55 @@
 body {
-    background: linear-gradient(135deg, #241f4e, #3a389f);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    color: #fff;
 }
-
-form {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px rgba(0,0,0,0.2);
-    width: 320px;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 93.5%;
-      padding: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-button {
-    width: 50%;
-    padding: 10px;
-    background: #7c899975;
-    border;
-    color: black;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-h1 {
-    color: white;
-    font-size: 28px;
-    }
 
 header {
-      width: 100%;
-      align-items: center;
-      padding: 40px 0 20px;
-    }
+    position: relative;  /* gör att menyn kan placeras absolut ovanpå */
+    background-image: url("Bakgrundsbild.png");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
 
-p {
+    display: flex;
+    flex-direction: column;  /* så loggan hamnar under menyn */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 600px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.menu {
+    position: absolute;      /* gör att den lägger sig ovanpå bilden */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background: rgba(0, 0, 0, 0.5); /* halvtransparent bakgrund */
+    padding: 15px 0;
+    backdrop-filter: blur(5px);     /* ger en snygg "frostad" effekt */
+}
+
+.menu div {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu div:hover {
+    color: #c4a188;
+}
+
+/* Loggan */
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 100px;  /* ger luft under menyn */
 }
