@@ -1,55 +1,112 @@
 body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    background-color: #ffffff;
-    color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-    position: relative;  /* gör att menyn kan placeras absolut ovanpå */
-    background-image: url("Bakgrundsbild.png");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
 
-    display: flex;
-    flex-direction: column;  /* så loggan hamnar under menyn */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    color: white;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+.head-container {
+  height: 10vh;
+  padding: 0 5vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  
 }
 
-.menu {
-    position: absolute;      /* gör att den lägger sig ovanpå bilden */
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    background: rgba(0, 0, 0, 0.5); /* halvtransparent bakgrund */
-    padding: 15px 0;
-    backdrop-filter: blur(5px);     /* ger en snygg "frostad" effekt */
-}
-
-.menu div {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.menu div:hover {
-    color: #c4a188;
-}
-
-/* Loggan */
 .logo {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 100px;  /* ger luft under menyn */
+  color: #ffcc00;
+  font-size: 1.5rem;
+  font-size: bold;
+  font-family: "BBH Sans Bartle", sans-serif;
 }
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+}
+
+.bestseller {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.bestseller > div {
+  background-color: white;
+  border-radius: 10px;
+  width: 250px;
+  height: 350px;
+  border: solid;
+  text-align: center;
+
+  
+}
+
+.best-item img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 8px;
+
+}
+
+.best-item h3 {
+  margin: 0.8rem 0 0.4rem 0;
+  color: black;
+}
+
+.best-item .price {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.best-item button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.best-item button:hover {
+  background-color: #e6b800;
+}
+
+.best-item img:hover {
+  filter: brightness(70%);
+  cursor: pointer;
+}
+
+.bestseller-section {
+  background-color: #c4bfbf6e;
+  padding: 3rem 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif
+  margin-bottom: 2rem;
+  position: relative;
+}
+
