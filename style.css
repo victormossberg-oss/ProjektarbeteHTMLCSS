@@ -1,112 +1,170 @@
+:root {
+  --sand: #f6f3ec;
+  --himmel: #a8c8db;
+  --hav: #5c7c89;
+  --accent: #cfa77b;
+  --text: #333;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background-color: #faf8f4;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--sand);
+  border-bottom: 1px solid #e5e3dd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: ;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--hav);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
-
-.head-container {
-  height: 10vh;
-  padding: 0 5vw;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  
-  
-}
-
-.logo {
-  color: #ffcc00;
-  font-size: 1.5rem;
-  font-size: bold;
-  font-family: "BBH Sans Bartle", sans-serif;
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-
 .nav-links a {
-  color: white;
   text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  font-size: large;
+  color: var(--hav);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.2rem; 
 }
 
-.bestseller {
+.hero {
+  background-image: url("hus.png"); /* din bild */
+  padding: 6rem 1.5rem;
+  background-size:  cover;
+  background-position: center 65%;
+  min-height: 80vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: center;  /* centrerar vertikalt */
+  align-items: center;      /* centrerar horisontellt */
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* mörk transparent toning över bilden för läsbarhet */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative; /* lägger texten ovanpå overlayen */
+  max-width: 700px;
   padding: 2rem;
 }
 
-.bestseller > div {
-  background-color: white;
-  border-radius: 10px;
-  width: 250px;
-  height: 350px;
-  border: solid;
-  text-align: center;
-
-  
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
 }
 
-.best-item img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-  border-radius: 8px;
-
-}
-
-.best-item h3 {
-  margin: 0.8rem 0 0.4rem 0;
-  color: black;
-}
-
-.best-item .price {
-  color: red;
-  font-weight: bold;
-  margin-bottom: 0.8rem;
-  font-size: 1.5rem;
-}
-
-.best-item button {
-  background-color: #ffcc00;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.best-item button:hover {
-  background-color: #e6b800;
-}
-
-.best-item img:hover {
-  filter: brightness(70%);
-  cursor: pointer;
-}
-
-.bestseller-section {
-  background-color: #c4bfbf6e;
-  padding: 3rem 2rem;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #222;
-  font-family: Arial, Helvetica, sans-serif
+.hero p {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-  position: relative;
 }
+
+.hero .button {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--hav);
+}
+
+.features {
+  display: flex;
+  flex-direction: column; /* staplat på mobil */
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--sand);
+  padding: 4rem 1.5rem;
+}
+
+.features article {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features article img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.features article h2 {
+  color: var(--hav);
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.features article p {
+  padding: 0 1rem 1.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.features article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ---------- RESPONSIVITET ---------- */
+@media (min-width: 768px) {
+  .features {
+    flex-direction: row;          /* bredvid varandra på större skärm */
+    justify-content: center;
+  }
+}
+
+
+
+
+
 
