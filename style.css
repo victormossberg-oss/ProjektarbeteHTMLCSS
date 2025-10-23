@@ -21,7 +21,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  height: ;
 }
 
 .nav-container {
@@ -98,7 +97,7 @@ header {
   margin-bottom: 2rem;
 }
 
-.hero .button {
+.button {
   background-color: var(--accent);
   color: #fff;
   padding: 0.8rem 2rem;
@@ -107,6 +106,7 @@ header {
   font-weight: 600;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
+  display: inline-block;
 }
 
 .button:hover {
@@ -155,6 +155,26 @@ header {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+.rum-sida .features article {
+  width: 480px;
+  height: 550px;
+  }
+
+  .rum-sida .features article:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.faq {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
 /* ---------- RESPONSIVITET ---------- */
 @media (min-width: 768px) {
   .features {
@@ -162,6 +182,7 @@ header {
     justify-content: center;
   }
 }
+
 
 
 
