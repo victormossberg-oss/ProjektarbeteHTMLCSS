@@ -143,7 +143,8 @@ header {
 }
 
 .feature-item:hover{
-  transform: scale(1.05);
+  transform: scale(1.2);
+  z-index: 3;
 }
 
 .feature-overlay {
