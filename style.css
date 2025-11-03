@@ -41,6 +41,7 @@ header {
   font-weight: bold;
   text-decoration: none;
   color: var(--hav);
+
 }
 
 .nav-links {
@@ -135,6 +136,10 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.feature-item h3 {
+  margin-right: 1.5rem;
+}
+
 .feature-item img {
   width: 400px;
   height: 300px;
@@ -186,6 +191,14 @@ header {
   max-width: 600px;
 }
 
+.features-rum article h2 {
+  color: var(--hav);
+}
+
+.features-rum article p {
+  color: var(--text);
+}
+
 .rum-bild {
   width: 100%;
   height: auto;
@@ -196,6 +209,7 @@ header {
 
 .faq {
   text-align: center;
+  margin-bottom: 3rem;
 
 }
 
@@ -398,9 +412,31 @@ summary {
 footer {
   background-color: var(--sand);
   padding: 1rem;
-  margin: 2rem 0 0 0;
   text-align: center;
   border-top: 1px solid #e5e3dd;;
+  color: var(--text);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--hav);
+}
+
+/* TACK FÖR DIN BOKNING */
+
+.tack {
+  background-color: var(--sand);
+  padding: 7rem;
+ }
+
+.tack h1 {
+  color: var(--hav);
+  text-align: center;
+}
+
+.tack p {
+  text-align: center;
+  color: var(--text);
 }
 
 
@@ -420,7 +456,7 @@ footer {
 /* ---------- RESPONSIVITET ---------- */
 @media (min-width: 768px) {
   .features {
-    flex-direction: row;          /* bredvid varandra på större skärm */
+    flex-direction: row;          
     justify-content: center;
   }
 }
