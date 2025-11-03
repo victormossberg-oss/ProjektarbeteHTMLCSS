@@ -111,6 +111,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
   display: inline-block;
+  border: none;
 }
 
 .button:hover {
@@ -143,7 +144,7 @@ header {
 }
 
 .feature-item:hover{
-  transform: scale(1.2);
+  transform: scale(1.05);
   z-index: 3;
 }
 
@@ -370,7 +371,7 @@ summary {
   border: 1px solid #ddd;
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color   0.3s ease;
 }
 
 .booking-form input:focus,
@@ -383,6 +384,23 @@ summary {
 .booking-form button {
   align-self: center;
   margin-top: 1rem;
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--sand);
+  padding: 1rem;
+  margin: 2rem 0 0 0;
+  text-align: center;
+  border-top: 1px solid #e5e3dd;;
 }
 
 
