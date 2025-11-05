@@ -44,6 +44,17 @@ header {
 
 }
 
+.logo-tack {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--hav);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+
 .nav-links {
     display: none;
     flex-direction: column;
@@ -58,16 +69,14 @@ header {
     text-align: center;
   }
 
-  .nav-links a:hover {
-    color: var(--hav);
-  }
 
   .nav-links li {
-    margin: 0.5rem 0;
+    margin: 0 1rem;
+    list-style: none;
   }
 
 .nav-links a {
-    color: var(--text);
+    color: var(--hav);
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
@@ -445,7 +454,7 @@ footer a {
  }
 
 .tack h1 {
-  color: var(--hav);
+  color: var(--text);
   text-align: center;
 }
 
@@ -458,8 +467,8 @@ footer a {
 .menu-icon {
   display: none;
   font-size: 2rem;
-  cursor: pointer;
   color: var(--hav);
+  cursor: pointer;
 }
 
 #menu-toggle {
@@ -474,6 +483,18 @@ footer a {
 
 
 /* RESPONSIVITET */
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: none;
+    border-top: none;
+    padding: 0;
+  }
+}
 
 @media (max-width: 768px) {
   .menu-icon {
