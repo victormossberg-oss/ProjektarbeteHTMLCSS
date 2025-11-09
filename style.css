@@ -495,11 +495,11 @@ footer a {
 }
 
 /* ===================================
-   9. Hamburger & Responsivitet
+   9. Hamburger
    =================================== */
 
 .menu-icon {
-  display: none;
+  display: block;
   font-size: 2rem;
   color: var(--hav);
   cursor: pointer;
@@ -509,17 +509,21 @@ footer a {
   display: none;
 }
 
- #menu-toggle:checked + .menu-icon + .nav-links {
-    display: flex;
-    animation: fadeIn 0.3s ease;
+#menu-toggle:checked + .menu-icon + .nav-links {
+  display: flex;
+  animation: fadeIn 0.3s ease;
 }
 
 /* ===================================
-   Responsivitet – Min 600px
+   10. RESPONSIVITET
    =================================== */
 
-
+/* Mellanstora skärmar (≥600px) */
 @media (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+
   .nav-links {
     display: flex !important;
     flex-direction: row;
@@ -533,49 +537,44 @@ footer a {
   .features {
     flex-direction: row;
     justify-content: center;
-  }
-}
-
-/* ===================================
-   Responsivitet – Max 600px
-   =================================== */
-
-@media (max-width: 600px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .menu-content {
-    padding: 2rem 1rem;
+    gap: 2rem;
+    padding: 3rem 2rem;
   }
 
   .menu-sections {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu-column {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .food-menu li {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.3rem;
-  }
-
-  .hero {
-    padding: 4rem 1rem;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+}
+
+/* Stora skärmar (≥1024px) */
+@media (min-width: 1024px) {
+  .nav-container {
+    max-width: 1200px;
+  }
+
+  .hero {
+    padding: 8rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .menu-content {
+    max-width: 1000px;
+    padding: 4rem;
   }
 
   .features {
-    gap: 1rem;
-    padding: 2rem 1rem;
+    gap: 3rem;
   }
-} 
 
+  .features-rum article {
+    max-width: 600px;
+  }
+}
