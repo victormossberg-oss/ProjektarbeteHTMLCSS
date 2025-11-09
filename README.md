@@ -37,7 +37,7 @@ Funktion                          CSS-mönster
 - Hover-effekter på bilder        transform: scale() och opacity på .feature-overlay
 - Responsiv layout                Flexbok och media queries (max-width: 600px och min-width: 600px)
 - Hero-overlay                    ::before med rgba() för mörk toning ovanpå bakgrundsbild
-- FAQ                             HTML5 <details> och <summary> – enkel inbyggd interaktivitet
+- FAQ                             HTML5 "details" och "summary" – enkel inbyggd interaktivitet
 - Formulärfokus                   :focus med accentfärg på inputfält för tydligare användarfeedback
 
 KÄNDA BEGRÄNSNINGAR
@@ -53,11 +53,23 @@ FÖRBÄTTRINGAR
 STILGUIDE
 --------------------
 Färgpalett -
-Namn	            Hex	            Användning
-Sand	            #f6f3ec	        Bakgrund & sektioner
-Hav	              #5c7c89	        Rubriker, logotyp, länkar
-Accent	          #cfa77b	        Knappar & detaljer
-Text	            #333333	        Brödtext
+Namn: Sand
+Hex: #f6f3ec
+Användning: Bakgrund & sektioner
+
+Namn: Hav
+Hex: #5c7c89
+Användning: Rubriker, logotyp, länkar
+
+Namn: Accent
+Hex: #cfa77b
+Användning: Knappar & detaljer
+
+Namn: Text
+Hex: #333333
+Användning: Brödtext
+
+--------------------
 
 Typografi -
 Rubriker: Poppins, semibold–bold
